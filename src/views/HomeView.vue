@@ -2,4 +2,5 @@
 
 <template>
   <div>Home page</div>
+  <Button variant="link">Click me</Button>
 </template>

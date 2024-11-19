@@ -4,6 +4,5 @@ import { Button } from "@/components/ui/button";
 </script>
 
 <template>
-  <div>Hello World <Button>Click me</Button></div>
   <RouterView />
 </template>
