@@ -12,7 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-// import { useAuthStore } from "@/stores/authStore";
+import { useAuthStore } from "@/stores/authStore";
 
 type PAYLOAD = {
   password: string;
@@ -21,15 +21,15 @@ type PAYLOAD = {
 
 const form = ref<PAYLOAD>({
   password: "techboladev",
-  username: "Bola",
+  username: "bola",
 });
 
 const router = useRouter();
-// const store = useAuthStore();
+const store = useAuthStore();
 
 const onSubmit = async () => {
   try {
-    // await store.loginUser(form.value);
+    await store.loginUser(form.value);
     router.push("/");
   } catch (error) {
     console.log(error);
